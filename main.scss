@@ -1,0 +1,146 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+    overflow: hidden;
+  box-sizing: border-box;
+  font-family: 'lato', sans-serif;
+  height: 100vh;
+  background: linear-gradient(#F8FAFC, #F1F5F9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+.clock {
+    position: relative;
+    width: 80vw;
+    max-width: 50rem;
+    height: 80vw;
+    max-height: 50rem;
+    background: radial-gradient(#F1F5F9, #FFFFFF);
+    border: clamp(1.2rem, 4vw, 3rem) solid #334155;
+    border-radius: 50%;
+}
+.number {
+    --rotation: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 92%;
+    height: 92%;
+    text-align: center;
+    transform: translate(-50%, -50%) rotate(var(--rotation));
+    font-size: clamp(2.2rem, 4vw, 3rem);
+}
+
+.number1 {--rotation: 30deg;
+p{
+    transform: rotate(-30deg);
+}}
+.number2 {--rotation: 60deg;
+p{
+    transform: rotate(-60deg);
+}}
+.number3 {--rotation: 90deg;
+p{
+    transform: rotate(-90deg);
+}}
+.number4 {--rotation: 120deg;
+p{
+    transform: rotate(-120deg);
+}
+}
+.number5 {--rotation: 150deg;
+p{
+    transform: rotate(-150deg);
+}}
+.number6 {--rotation: 180deg;
+p{
+    transform: rotate(-180deg);
+}}
+.number7 {--rotation: 210deg;
+p{
+    transform: rotate(-210deg);
+}}
+.number8 {--rotation: 240deg;
+p{
+    transform: rotate(-240deg);
+}}
+.number9 {--rotation: 270deg;
+p{
+    transform: rotate(-270deg);
+}}
+.number10 {--rotation: 300deg;
+p{
+    transform: rotate(-300deg);
+}}
+.number11 {--rotation: 330deg;
+p{
+    transform: rotate(-330deg);
+}}
+
+.brand {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: Clamp(1.2rem, 4vw, 3rem);
+    letter-spacing: .3rem;
+    color: #64748B;
+}
+
+.hand {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));     
+    border: .1rem solid white;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background: #1E293B;
+    transform-origin: bottom;
+    z-index: 10;
+}
+
+.clock::after {
+    content: '';
+    position: absolute;
+    background-color: #334155;
+    z-index: 11;
+    width: 1.7rem;
+    height: 1.7rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.second {
+    width: .3rem;
+    height: 43%;
+    background-color: #f00;
+}
+.minute {
+    width: .7rem;
+    height: 37%;
+    color: #334155;
+}
+.hour {
+    width: 1rem;
+    height: 30%;
+    color: #334155;
+}
